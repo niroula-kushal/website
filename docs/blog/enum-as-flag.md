@@ -13,6 +13,16 @@ Enums in C# provide a convenient way to define a set of named integral constants
 
 In this article, we’ll explore how to use enums as flags, how bitwise operators come into play, and why this approach can enhance flexibility and readability in your code.
 
+## TL;DR
+Here is a quick round up if you are too busy or too lazy to read all content. 
+
+Using enums as flags allows you to combile enum values to represent combination of enums. 
+1. Use [Flags] attribute in you enum to declare it as flag
+2. Create flag values by combining enum values
+```csharp
+var readWritePermission = FilePermissions.Read | FilePermissions.Write;
+```
+
 ## Setting Up Enums as Flags
 
 In C#, marking an enum with the `[Flags]` attribute allows you to use it as a set of flags. Here’s a basic example:

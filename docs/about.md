@@ -1,27 +1,30 @@
 # About Me
 
-I'm Kusal Niroula, a Full Stack Developer based in Nepal. I specialize in building scalable web applications and have a passion for learning new technologies.
+I'm Kushal Niroula, a Full Stack Developer based in Nepal. I specialize in building scalable web applications and have a passion for learning new technologies.
 
 ## Skills
 
 ### Frontend
-- React.js
-- Next.js
 - TypeScript
+- Vue
+- React
+- Nuxt
 - Tailwind CSS
-- Material UI
+- UnoCss
+- Bootstrap
+- Winform (C#), Xamarin (Android)
+- react-native (cross platform app development)
 
 ### Backend
-- Node.js
-- Express.js
-- NestJS
+- C#
+- PHP
+- Codeigniter
 - PostgreSQL
-- MongoDB
+- MySql, SqlServer
 
 ### Tools & Others
 - Git
 - Docker
-- AWS
 - Linux
 - Agile Methodologies
 
@@ -42,6 +45,7 @@ Currently working as a Full Stack Developer, focusing on:
 ## Contact
 
 Feel free to reach out to me through:
-- [LinkedIn](https://www.linkedin.com/in/kusal-niroula/)
-- [GitHub](https://github.com/kusalniroula)
-- Email: kusalniroula@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/kushal-niroula/)
+- [GitHub](https://github.com/niroula-kushal)
+- [Dev.to](https://dev.to/kushal-niroula)
+- Email: niroulakushal31@gmail.com

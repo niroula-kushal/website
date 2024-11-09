@@ -16,7 +16,7 @@ hero:
       link: /about
 features:
   - title: Full Stack Development
-    details: Experienced in both frontend and backend development using modern technologies
+    details: A decade long Experienc in both frontend and backend development using modern technologies
   - title: Problem Solving
     details: Strong analytical and problem-solving skills with a focus on efficient solutions
   - title: Team Collaboration
@@ -33,7 +33,7 @@ const members = [
     title: 'Full stack developer',
     links: [
       { icon: 'github', link: 'https://github.com/niroula-kushal' },
-      { icon: 'twitter', link: 'https://x.com/falconKushal' }
+      { icon: 'twitter', link: 'https://twitter.com/falconKushal' }
     ]
   }
 ]
@@ -41,6 +41,4 @@ const members = [
 
 ### My Card
 
-<div style="">
-  <VPTeamMembers size="medium" :members="members" />
-</div>
+<VPTeamMembers size="medium" :members="members" />

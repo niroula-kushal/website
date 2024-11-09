@@ -59,4 +59,5 @@ export default defineConfig({
     },
   },
   vite: { plugins: [SearchPlugin({})] },
+  cleanUrls: true
 });
