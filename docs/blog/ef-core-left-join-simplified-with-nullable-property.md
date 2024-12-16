@@ -97,7 +97,7 @@ var result = from order in _dbContext.Orders
              select new OrderWithInvoice
              {
                  OrderId = order.Id,
-                 InvoiceAmount = invoice?.Amount
+                 InvoiceAmount = invoice.Amount
              };
 ```
 

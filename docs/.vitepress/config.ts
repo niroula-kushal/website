@@ -39,6 +39,10 @@ export default defineConfig({
                   text: 'Using enums as Flags in C#',
                   link: '/blog/enum-as-flag',
                 },
+                {
+                  text: 'Ef Core Left Join Simplified',
+                  link: '/blog/ef-core-left-join-simplified-with-nullable-property',
+                },
               ],
             },
           ],
