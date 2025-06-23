@@ -5,7 +5,7 @@ hero:
   text: "Full Stack Developer"
   tagline: Passionate about building scalable web applications and solving complex problems
   image:
-    src: /Kushal.png
+    src: /kushal.png
     alt: Kushal Niroula
   actions:
     - theme: brand
