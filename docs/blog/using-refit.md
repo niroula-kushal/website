@@ -1,6 +1,33 @@
+---
+layout: doc
+title: "How I am using Refit in .NET Core"
+description: "Learn how to simplify API calls in .NET Core using Refit library with auto-generated types and tenant-specific API key handling."
+publishDate: 2024-12-18
+author: "Kushal Niroula"
+editLink: true
+head:
+  - - meta
+    - property: og:image
+      content: https://kusalniroula.com.np/using-refit.png
+  - - meta
+    - property: og:title
+      content: "How I am using Refit in .NET Core"
+  - - meta
+    - property: og:description
+      content: "Learn how to simplify API calls in .NET Core using Refit library with auto-generated types and tenant-specific API key handling."
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:image
+      content: https://kusalniroula.com.np/using-refit.png
+---
+
 # How I am using Refit in .NET Core
 
-When working with APIs, writing all the `HttpClient` code by hand can feel boring. That’s where **Refit** comes in. In this article, I’ll show you what Refit is, why it’s helpful, and how I use it in my own project.
+![Using Refit in .NET Core](/using-refit.png)
+
+When working with APIs, writing all the `HttpClient` code by hand can feel boring. That's where **Refit** comes in. In this article, I'll show you what Refit is, why it's helpful, and how I use it in my own project.
 
 ---
 
