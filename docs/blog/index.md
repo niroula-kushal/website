@@ -16,6 +16,6 @@ A blogpost on how to use enums as flags in C#
 
 A blogpost on how to simplify left join usage in Ef Core
 
-### [Using Refit to consume API's](/blog.using-refit)
+### [Using Refit to consume APIs](/blog.using-refit)
 
-A blogpost on how I use Refit to simplify consuming API's
+A blogpost on how I use Refit to simplify consuming APIs
