@@ -15,3 +15,7 @@ A blogpost on how to use enums as flags in C#
 ### [Ef Core Left Join Simplified](/blog/ef-core-left-join-simplified-with-nullable-property)
 
 A blogpost on how to simplify left join usage in Ef Core
+
+### [Using Refit to consume API's](/blog.using-refit)
+
+A blogpost on how I use Refit to simplify consuming API's
