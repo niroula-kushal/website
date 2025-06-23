@@ -43,6 +43,10 @@ export default defineConfig({
                   text: 'Ef Core Left Join Simplified',
                   link: '/blog/ef-core-left-join-simplified-with-nullable-property',
                 },
+                {
+                  text: 'Using Refit to consume APIs',
+                  link: '/blog/using-refit',
+                },
               ],
             },
           ],
