@@ -14,7 +14,14 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: 'Kushal Niroula' }],
     ['meta', { property: 'og:site_name', content: 'Kushal Niroula' }],
     ['meta', { property: 'og:image', content: 'https://kusalniroula.com.np/kushal.jpg' }],
-    ['meta', { property: 'og:url', content: 'https://kusalniroula.com.np/' }]
+    ['meta', { property: 'og:url', content: 'https://kusalniroula.com.np/' }],
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-0JS25PX679' }],
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0JS25PX679');
+    `]
   ],
   themeConfig: {
     nav: [
