@@ -23,11 +23,53 @@ head:
       content: https://kusalniroula.com.np/using-refit.png
 ---
 
-# How I am using Refit in .NET Core
+# Using Refit!
 
 ![Using Refit in .NET Core](/using-refit.png)
 
-When working with APIs, writing all the `HttpClient` code by hand can feel boring. That's where **Refit** comes in. In this article, I'll show you what Refit is, why it's helpful, and how I use it in my own project.
+
+# Pain of API consumption
+API consumption is a must in todays integration oriented world. We need to communicate with multiple services in order to perform various tasks, and in the .net world, it is often handle via http client.
+
+Http Client is great. It provides a simple api that lets us craft our HTTP requests and handle the HTTP responses. However, it can sometimes be daunting to use it.
+
+Consider this example of API consumption of the countries rest api:
+
+```csharp
+var client = new HttpClient
+{
+    BaseAddress = new Uri("https://restcountries.com/v3.1/")
+};
+
+// GET request
+var response = await client.GetAsync("all");
+
+// Check status
+if (!response.IsSuccessStatusCode)
+{
+    Console.WriteLine($"Error: {response.StatusCode}");
+    return;
+}
+
+var json = await response.Content.ReadAsStringAsync();
+
+var options = new JsonSerializerOptions
+{
+    PropertyNameCaseInsensitive = true
+};
+var countries = JsonSerializer.Deserialize<List<Country>>(json, options);
+
+foreach (var country in countries!.Take(5)) // Print a few countries
+{
+    Console.WriteLine(
+        $"{country.Name.Common} — {country.Region} — Capital: {string.Join(", ", country.Capital)}");
+}
+```
+
+This does the job, but it can sometimes be too much boilerplate and takes away from our original intent; get list of countries from the api.
+
+Fortunately for us, there are libraries that make API consumption easier and fun. `Refit` is one such library. It is a wrapper around the `HttpClient` library and adds syntactic sugar that vastly improves the develper experience when consuming APIs.
+
 
 ---
 
@@ -164,6 +206,67 @@ services.AddRefitClient<ISomeApiService>()
 With this setup:
 - Every outgoing request will include the correct API key.
 - You can manage per-tenant configurations easily.
+
+---
+
+## Example
+
+Here’s a simple example of using Refit to call a public REST API. Let’s say we want to fetch some country data.
+
+```csharp
+// Define interface that describe the endpoints
+
+// ICountriesApi.cs
+using Refit;
+
+public interface ICountriesApi
+{
+    [Get("/all")]
+    Task<ApiResponse<List<CountryDto>>> GetAllCountriesAsync();
+
+    [Get("/alpha/{code}")]
+    Task<ApiResponse<CountryDto>> GetCountryByCodeAsync(string code);
+}
+
+// Define the DTOs
+
+public class CountryDto
+{
+    public string Name { get; set; }
+    public string Region { get; set; }
+    public int Population { get; set; }
+}
+
+// Register the DI Service
+builder.Services.AddRefitClient<ICountriesApi>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://restcountries.com/v3.1"));
+
+
+// Using it in other services
+public class CountryService(ICountriesApi countriesApi)
+{
+    public async Task PrintCountriesAsync()
+    {
+        var response = await countriesApi.GetAllCountriesAsync();
+        if (response.IsSuccessStatusCode)
+        {
+            var countries = response.Content;
+            foreach (var country in countries.Take(5)) // Just take a few
+            {
+                Console.WriteLine($"{country.Name} ({country.Region}), Population: {country.Population}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Error fetching countries: " + response.Error?.Message);
+        }
+    }
+}
+
+
+```
+
+With refitter, the DTOs and the interfaces are generated automatically. No need to create them manually and keep them in sync manually. Just regenerate them using refitter once the API changes and you have all the new methods/changed methods available to you as a C# typed methods.
 
 ---
 
