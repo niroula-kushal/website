@@ -27,6 +27,11 @@ head:
 
 ![Using Refit in .NET Core](/using-refit.png)
 
+# tl;dr
+Using `Refit` and `Refitter` can make your API consumption code cleaner and easier. It allows developers to define their API as a C# interface, which Refit then uses to handle the HTTP calls and JSON serialization automatically. This reduces the amount of boilerplate code required when working with APIs, making the developer experience more enjoyable. Refit also provides a way to handle API keys, which can be specific to each tenant, by using a custom HttpMessageHandler. This document provides examples of how to use Refit, including how to auto-generate types using Refitter and how to create a partial interface file to add custom functionality.
+
+> Libraries Used: [Refit](https://github.com/reactiveui/refit) [Refitter](https://github.com/christianhelle/refitter)
+
 
 # Pain of API consumption
 API consumption is a must in todays integration oriented world. We need to communicate with multiple services in order to perform various tasks, and in the .net world, it is often handle via http client.
