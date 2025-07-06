@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: "Kushal Niroula"
+  name: "Kushal Niroula | Living through code"
   text: "Full Stack Developer"
   tagline: Passionate about building scalable web applications and solving complex problems
   image:
