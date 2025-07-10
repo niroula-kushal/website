@@ -4,6 +4,10 @@ Welcome to my blog! Here you'll find my thoughts, tutorials, and experiences in 
 
 ## Latest Posts
 
+### [PostgreSQL Ordering: Why Explicit ORDER BY Matters More Than You Think](/blog/postgresql-ordering-why-explicit-ordering-matters)
+
+Learn why your data randomly changes order when moving from SQL Server to PostgreSQL, and why explicit ordering is crucial for consistent results.
+
 ### [My First Post](/blog/first-post)
 
 An introduction to my blog and what you can expect from my future posts.
