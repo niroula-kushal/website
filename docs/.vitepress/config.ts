@@ -53,13 +53,19 @@ export default defineConfig({
                 {
                   text: 'Using Refit to consume APIs',
                   link: '/blog/using-refit',
-                },
-                {
-                  text: 'PostgreSQL Ordering: Why Explicit Ordering Matters',
-                  link: '/blog/postgresql-ordering-why-explicit-ordering-matters',
-                },
+                }
               ],
             },
+            {
+              text: 'SQL',
+              collapsed: false,
+              items: [
+                {
+                  text: 'Postgres: Why Explicit Ordering Matters',
+                  link: '/blog/postgresql-ordering-why-explicit-ordering-matters',
+                }
+              ],
+            }
           ],
         },
       ],
