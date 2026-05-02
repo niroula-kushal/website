@@ -4,6 +4,7 @@ import { SearchPlugin } from 'vitepress-plugin-search';
 export default defineConfig({
   title: 'Kushal Niroula',
   description: 'Full Stack Developer | Tech Enthusiast',
+  appearance: false,
   /* prettier-ignore */
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/kushal.jpg' }],
