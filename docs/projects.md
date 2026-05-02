@@ -13,7 +13,6 @@ const lane = ref(0)
 const speed = ref(1.6)
 const shipOffset = ref(0)
 
-let frame = 0
 let rafId = null
 
 const planeX = computed(() => {
@@ -25,7 +24,6 @@ const planeY = computed(() => {
 })
 
 function animate() {
-  frame += speed.value
   shipOffset.value = (shipOffset.value + speed.value * 0.6) % 100
   rafId = requestAnimationFrame(animate)
 }
