@@ -203,4 +203,3 @@ Tip: Learn by building and explaining your model decisions in plain language.
 
 Start small, finish projects, and document what you learn. Employers and collaborators care less about how many tutorials you watched, and more about whether you can solve problems with data in the real world.
 
-If you want, I can also create a **personalized machine learning roadmap** based on your current background (student, developer, analyst, or complete beginner).
