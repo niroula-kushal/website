@@ -4,6 +4,10 @@ Welcome to my blog! Here you'll find my thoughts, tutorials, and experiences in 
 
 ## Latest Posts
 
+### [Machine Learning From Scratch: A Complete Beginner's Guide](/blog/machine-learning-from-scratch)
+
+A complete, beginner-friendly roadmap to learn machine learning from zero with code, project ideas, and a 90-day plan.
+
 ### [PostgreSQL Ordering: Why Explicit ORDER BY Matters More Than You Think](/blog/postgresql-ordering-why-explicit-ordering-matters)
 
 Learn why your data randomly changes order when moving from SQL Server to PostgreSQL, and why explicit ordering is crucial for consistent results.
